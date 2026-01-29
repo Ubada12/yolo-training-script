@@ -3,5 +3,6 @@ model:
   weights: yolo11n.pt
 
 training:
-  batch: 8
-  lr0: 0.0033
+  batch: 16
+  lr0: 0.0075
+
