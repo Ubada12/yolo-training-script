@@ -1,0 +1,7 @@
+model:
+  name: yolo11n
+  weights: yolo11n.pt
+
+training:
+  batch: 8
+  lr0: 0.0033

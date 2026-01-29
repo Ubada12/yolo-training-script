@@ -1,0 +1,7 @@
+model:
+  name: yolo11s
+  weights: yolo11s.pt
+
+training:
+  batch: 12
+  lr0: 0.0025

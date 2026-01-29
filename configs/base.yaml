@@ -1,0 +1,53 @@
+# ==================================================
+# BASE TRAINING CONFIG (LOCKED)
+# ==================================================
+
+project:
+  name: goat_detector
+  task: detect
+  single_cls: true
+
+dataset:
+  data_yaml: /workspace/dataset_yolo_final/data.yaml
+  cache: disk
+
+training:
+  imgsz: 1024
+  epochs: 300
+  patience: 20
+  amp: true
+  workers: 12
+  device: "0"
+  pretrained: true
+
+optimizer:
+  type: SGD
+  momentum: 0.937
+  weight_decay: 0.0005
+
+augmentation:
+  hsv_h: 0.0
+  hsv_s: 0.15
+  hsv_v: 0.25
+  degrees: 5.0
+  translate: 0.05
+  scale: 0.10
+  shear: 0.0
+  fliplr: 0.4
+  flipud: 0.0
+  mosaic: 0.2
+  mixup: 0.1
+  cutmix: 0.0
+  erasing: 0.2
+  copy_paste: 0.0
+  auto_augment: true
+
+logging:
+  save_plots: true
+  visualize: true
+  verbose: true
+
+safety:
+  fail_on_oom: true
+  fail_on_dataset_error: true
+  clean_abort: true

@@ -1,0 +1,7 @@
+model:
+  name: yolo12n
+  weights: yolo12n.pt
+
+training:
+  batch: 12
+  lr0: 0.0075
